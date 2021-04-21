@@ -1,0 +1,8 @@
+## Ignore files
+
+.idea/
+build/
+.gradle/
+target/*
+history/
+gradle/*
