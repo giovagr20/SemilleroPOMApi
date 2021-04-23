@@ -35,10 +35,13 @@ public class GetUsersStep {
                 .baseUri(URI_BASE.getValue())
                 .basePath(URI_SUFFIX_USERS.getValue()).log()
                 .all().get();
+
+        System.out.println(response);
     }
 
     @Step
     public void verifyStatusCode(int statusCode) {
         SerenityRest.lastResponse().then().assertThat().statusCode(statusCode);
+        //SerenityRest.lastResponse().then().assertThat().body(email, "data.email");
     }
 }
